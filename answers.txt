@@ -1,0 +1,21 @@
+import statsmodels.api as sm # What does this do? The API focuses on models and the most frequently used statistical test, and tools. Import Paths and Structure explains the design of the two API modules and how importing from the API differs from directly importing from the module where the model is defined. See the detailed topic pages in the User Guide for a complete list of available models, statistics, and tools.
+from statsmodels.graphics.api import abline_plot # What does this do? Find out and type here.
+
+from sklearn.metrics import mean_squared_error, r2_score # What does this do? - This helps us determine the accuracy of our model.
+from sklearn.model_selection import train_test_split #  What does this do? Splits our data into training sets and testing sets. Usually by 75% to train and 25 to test.
+from sklearn import linear_model, preprocessing # What does this do? Find out and type here.
+
+
+What can you infer about the nature of these variables, as output by the info() method?
+- All of the values are numeric.
+
+# Which variables might be suitable for regression analysis, and why?
+All except for the first unnamed column and the quality column. These values are all float values and can be analyzed with regression. Discrete values like the quality column requires a different kind of analysis.
+
+For those variables that aren't suitable for regression analysis, is there another type of statistical modeling for which they are suitable?
+The classification model would be better suited to predict quality.
+
+
+How does color relate to extent of correlation? A more intense color corresponds with a more intense correlation.
+How might we use the plot to show us interesting relationships worth investigating? Any strong positive or negative correlation creates questions that are worth answering about your data.
+More precisely, what does the heatmap show us about the fixed acidity variable's relationship to the density variable? - That there is a strong correlation (~0.8) that was able to be used to create a regression model. 
